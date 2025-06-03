@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>box-shadow</title>
+    <style>
+        .box1 {
+            width: 400px;
+            height: 400px;
+            background-color: orange;
+            margin: 100px auto;
+            font-size: 48px;
+
+            /* 写两个值，含义：水平方向位置  垂直方向位置 */
+            /* box-shadow: 10px 10px; */
+
+            /* 写三个值，含义：水平方向位置  垂直方向位置  阴影颜色 */
+            /* box-shadow: 10px 10px blue; */
+
+            /* 写三个值，含义：水平方向位置  垂直方向位置  阴影模糊半径(越大越柔和/模糊) */
+            /* box-shadow: 10px 10px 10px; */
+
+            /* 写四个值，含义：水平方向位置  垂直方向位置  阴影模糊半径(越大越柔和/模糊) 阴影颜色 */
+            /* box-shadow: 10px 10px 10px blue; */
+
+            /* 写五个值，含义：水平方向位置  垂直方向位置  阴影模糊半径(越大越柔和/模糊) 阴影外延(阴影大小) 阴影颜色 */
+            /* box-shadow: 10px 10px 10px 0px blue; */
+
+            /* 写六个值，含义：水平方向位置  垂直方向位置  阴影模糊半径(越大越柔和/模糊) 阴影外延(阴影大小) 阴影颜色 内阴影 */
+            /* box-shadow: 10px 10px 10px 10px blue inset; */
+
+            position: relative;
+            left: 0;
+            top: 0;
+            transition: all 0.2s linear;
+        }
+
+        .box1:hover {
+            box-shadow: 0px 0px 20px black;
+            top: -50px;
+            left: 0;
+        }
+
+        video {
+            width: 400px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">你好啊</div>
+
+    <video src="../../1_bin/A_Dancing/16抖音风.mp4" autoplay muted controls loop></video>
+</body>
+
+</html>

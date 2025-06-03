@@ -9,16 +9,34 @@
             width: 400px;
             height: 400px;
             background-color: orange;
-            resize: horizontal; /* 允许水平调整大小 */
-            overflow: hidden; /* 允许内容溢出时滚动 */
+            /* 允许水平调整大小 */
+            /* resize: horizontal; */
+            /* 允许垂直调整大小 */
+            /* resize: vertical; */
+            /* 允许水平和垂直调整大小 */
+            resize: both;
+            /* 允许内容溢出时滚动 */
+            overflow: hidden;
             display: inline-block;
+        }
+
+        .box2 {
+            width: 800px;
+            height: 100px;
+            background-color: skyblue;
+        }
+
+        video {
+            width: 400px;
         }
     </style>
 </head>
 
 <body>
-    <div class="box1"></div>
-    <span>使用鼠标拖动右下角的调整手柄来改变盒子的大小。</span>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+    <video src="../../1_bin/A_Dancing/16抖音风.mp4" autoplay muted controls></video>
 </body>
 
 </html>

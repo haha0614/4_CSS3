@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>background-clip</title>
+    <style>
+        .box1 {
+            width: 400px;
+            height: 400px;
+            background-color: skyblue;
+            margin: 20px auto;
+            font-size: 100px;
+            font-weight: bold;
+            color: transparent;
+            padding: 50px;
+            border: 50px dashed black;
+
+
+            background-image: url(../images/bg02.jpg);
+            background-repeat: no-repeat;
+            /* 超出某个地方的背景就不出现了 */
+            background-clip: text;
+            /* 可选值：border-box, padding-box, content-box */
+        }
+
+        video {
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">你好啊</div>
+    <video autoplay loop muted preload="auto" src="../../1_bin/A_Dancing/16抖音风.mp4"></video>
+</body>
+
+</html>
