@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>多背景图</title>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            min-width: 200px;
+            min-height: 254px;
+            border: 1px solid black;
+            background:
+                url(../images/bg-lt.png) no-repeat left top,
+                url(../images/bg-rt.png) no-repeat right top,
+                url(../images/bg-lb.png) no-repeat left bottom,
+                url(../images/bg-rb.png) no-repeat right bottom;
+
+            resize: both;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
