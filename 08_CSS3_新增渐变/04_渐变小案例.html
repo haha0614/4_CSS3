@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>渐变小案例</title>
+    <style>
+        .box1 {
+            width: 600px;
+            height: 800px;
+            border: 1px solid #000;
+            padding: 20px;
+            margin: 0 auto;
+            background-image: repeating-linear-gradient(to bottom, transparent 0, transparent 29px, gray 30px);
+            background-clip: content-box;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            border-radius: 100px;
+            border: 1px solid #000;
+            background-image: radial-gradient(circle at 60px 60px, white, #333);
+
+        }
+
+        video {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2">
+
+    </div>
+    <video src="../../1_bin/A_Dancing/16抖音风.mp4" autoplay muted loop controls></video>
+</body>
+
+</html>
