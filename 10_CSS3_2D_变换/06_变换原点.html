@@ -1,49 +1,51 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>变换原点</title>
-    <style>
-      .outer {
-        width: 200px;
-        height: 200px;
-        border: 2px solid black;
-        margin: 0 auto;
-        margin-top: 100px;
-      }
 
-      .inner {
-        width: 200px;
-        height: 200px;
-        background-color: deepskyblue;
-        /*通过关键词调整变换的原点*/
-        /*transform-origin: left top;*/
+<head>
+  <meta charset="UTF-8" />
+  <title>变换原点</title>
+  <style>
+    .outer {
+      width: 200px;
+      height: 200px;
+      border: 2px solid black;
+      margin: 0 auto;
+      margin-top: 100px;
+    }
 
-        /*通过像素值调整变换的原点*/
-        /*transform-origin: 50px 50px;*/
+    .inner {
+      width: 200px;
+      height: 200px;
+      background-color: deepskyblue;
+      /*通过关键词调整变换的原点*/
+      /*transform-origin: left top;*/
 
-        /*通过百分比调整变换的原点*/
-        /*transform-origin: 50% 50%;*/
+      /*通过像素值调整变换的原点*/
+      /*transform-origin: 50px 50px;*/
 
-        /*只写一个值的时候，默认设置的是X轴位置(top和bottom关键词设置的是Y)，而Y轴依旧是默认值50%*/
-        /*transform-origin: left;*/
+      /*通过百分比调整变换的原点*/
+      /*transform-origin: 50% 50%;*/
 
-        transform-origin: left top;
+      /*只写一个值的时候，默认设置的是X轴位置(top和bottom关键词设置的是Y)，而Y轴依旧是默认值50%*/
+      /*transform-origin: left;*/
 
-        /*变换原点位置的改变对 旋转 有影响*/
-        /*transform: rotate(0deg);*/
-        /*变换原点位置的改变对 缩放 有影响*/
-        transform: scale(0.5);
+      transform-origin: left top;
 
-        /*变换原点位置的改变对位移没有影响*/
-        /*transform: translate(100px, 100px);*/
-      }
-    </style>
-  </head>
+      /*变换原点位置的改变对 旋转 有影响*/
+      /*transform: rotate(0deg);*/
+      /*变换原点位置的改变对 缩放 有影响*/
+      transform: scale(0.5);
 
-  <body>
-    <div class="outer">
-      <div class="inner">你好啊</div>
-    </div>
-  </body>
+      /*变换原点位置的改变对位移没有影响*/
+      /*transform: translate(100px, 100px);*/
+    }
+  </style>
+</head>
+
+<body>
+  <div class="outer">
+    <div class="inner">你好啊</div>
+  </div>
+</body>
+
 </html>
