@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>旋转</title>
+    <style>
+      .outer {
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+        margin: 0 auto;
+        margin-top: 100px;
+      }
+
+      .inner1 {
+        width: 200px;
+        height: 200px;
+        background-color: deepskyblue;
+        /*正值为顺时针旋转，并且默认中心旋转，rotate只写一个值的时候，默认等同于rotateZ*/
+        transform: rotateZ(30deg);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="outer">
+      <div class="inner1">你好啊</div>
+    </div>
+  </body>
+</html>

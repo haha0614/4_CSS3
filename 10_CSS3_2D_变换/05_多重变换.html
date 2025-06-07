@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>多重变换</title>
+    <style>
+      .outer {
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+        margin: 0 auto;
+        margin-top: 100px;
+      }
+
+      .inner {
+        width: 200px;
+        height: 200px;
+        background-color: deepskyblue;
+        /*坐标系位置不会改变，且位移的最终位置以元素左上角为原点，导致先后缩放的最终效果不同*/
+        /*transform: translate(100px, 100px) scale(0.5);*/
+        /*transform: scale(0.5) translate(100px, 100px);*/
+        /*旋转的中心点为自身的中心*/
+        transform: translate(100px, 100px) rotate(30deg);
+        /*旋转后坐标系发生了变化，且位移后旋转的原点位置不变，导致非常诡异*/
+        /*transform: rotate(30deg) translate(100px, 100px);*/
+
+        /*注意：多重变换时，建议最后旋转*/
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="outer">
+      <div class="inner">你好啊</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>扭曲</title>
+    <style>
+      .outer {
+        width: 200px;
+        height: 200px;
+        border: 2px solid black;
+        margin: 0 auto;
+        margin-top: 100px;
+      }
+
+      .inner1 {
+        width: 200px;
+        height: 200px;
+        background-color: deepskyblue;
+        /*可以给负值*/
+        /*值增大，左上角向左，右下角向右*/
+        transform: skewX(0deg);
+        /*值增大，左上角向上，右下角向下*/
+        transform: skewY(0deg);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="outer">
+      <div class="inner1">你好啊</div>
+    </div>
+  </body>
+</html>
