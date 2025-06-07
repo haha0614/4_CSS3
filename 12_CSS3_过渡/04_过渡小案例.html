@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>过渡小案例</title>
+    <style>
+        .outer {
+            width: 400px;
+            height: 224px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            cursor: pointer;
+        }
+
+        img {
+            width: 400px;
+            height: 224px;
+
+            transition: 0.5s all ease;
+        }
+        video {
+            width: 400px;
+            height: 224px;
+
+            transition: 0.5s all ease;
+        }
+
+        .mask {
+            width: 400px;
+            height: 224px;
+
+            font-size: 100px;
+            text-align: center;
+            line-height: 224px;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            opacity: 0;
+            color: white;
+            background-color: black;
+
+            transition: 0.5s all ease;
+        }
+
+        .outer:hover .mask {
+            opacity: 0.6;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .outer:hover img {
+            transform: scale(1.5) rotate(15deg);
+        }
+        .outer:hover video {
+            transform: scale(1.5) rotate(15deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <img src="./images/shanghai.jpg" alt="上海">
+        <div class="mask">上海</div>
+    </div>
+    <div class="outer">
+        <video autoplay muted loop src="../../1_bin/A_Dancing/16抖音风.mp4"></video>
+        <div class="mask">上海</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>基本使用</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        .inner {
+            width: 100px;
+            height: 100px;
+            background-color: deepskyblue;
+
+            /* 应用动画到元素 */
+            animation-name: goRight2;
+            /* 动画持续的时间 */
+            animation-duration: 5s;
+            /* 动画延迟时间 */
+            animation-delay: 1s;
+        }
+
+        /* 定义一个动画/一组关键帧 -- 第一种方式 */
+        @keyframes goRight1 {
+
+            /* 第一帧 */
+            from {
+                /* 可省略，不写就是不做改变 */
+                transform: translate(0px);
+            }
+
+            /* 最后一帧 */
+            to {
+                transform: translate(900px);
+                background-color: red;
+            }
+        }
+
+
+        /* 定义一个动画/一组关键帧 -- 第二种方式 */
+        @keyframes goRight2 {
+
+            /* 第一帧 */
+            0% {
+                /* 可省略，不写就是不做改变 */
+                transform: translate(0px);
+            }
+
+            29% {
+                background-color: red;
+            }
+
+            48% {
+                background-color: orange;
+            }
+
+            88% {
+                background-color: yellow;
+            }
+
+            /* 最后一帧 */
+            100% {
+                transform: translate(900px) rotate(360deg);
+                background-color: purple;
+                border-radius: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+
+</html>

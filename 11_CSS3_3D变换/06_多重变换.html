@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>缩放</title>
+  <title>多重变换</title>
   <style>
     .outer {
       width: 200px;
@@ -24,8 +24,10 @@
       width: 200px;
       height: 200px;
       background-color: #00bfff98;
+      /* transform-origin: -100px 0; */
+      /* transform: rotateY(45deg) ; */
 
-      transform: scalez(2) rotateY(45deg);
+      transform: translateZ(100px) scaleZ(1) rotateY(45deg);
     }
   </style>
 </head>

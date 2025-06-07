@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>基本使用</title>
+    <style>
+        .outer {
+            width: 1000px;
+            height: 900px;
+            border: 1px solid black;
+        }
+
+        .box {
+            width: 200px;
+            height: 100px;
+            transition-property: all;
+            transition-duration: 5s;
+            /* 过渡延迟 */
+            /* transition-delay: 2s; */
+        }
+
+        .box1 {
+            background-color: skyblue;
+            transition-timing-function: ease;
+        }
+
+        .box2 {
+            background-color: orange;
+            transition-timing-function: linear;
+        }
+
+        .box3 {
+            background-color: gray;
+            transition-timing-function: ease-in;
+        }
+
+        .box4 {
+            background-color: tomato;
+            transition-timing-function: ease-out;
+        }
+
+        .box5 {
+            background-color: green;
+            transition-timing-function: ease-in-out;
+        }
+
+        .box6 {
+            background-color: purple;
+            transition-timing-function: step-start;
+        }
+
+        .box7 {
+            background-color: deepskyblue;
+            transition-timing-function: step-end;
+        }
+
+        .box8 {
+            background-color: chocolate;
+            transition-timing-function: steps(20, end);
+        }
+
+        .box9 {
+            background-color: deeppink;
+            transition-timing-function: cubic-bezier(.17, .67, .83, .67);
+        }
+
+        .outer:hover .box {
+            width: 1000px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="box box1">ease(平滑过渡>慢-快-慢)</div>
+        <div class="box box2">liner(线性)</div>
+        <div class="box box3">ease-in(缓入>慢-快)</div>
+        <div class="box box4">ease-out(缓出>快-慢)</div>
+        <div class="box box5">ease-in-out(缓入缓出>慢-快-慢)</div>
+        <div class="box box6">step-start(不考虑过渡的时间直接终点)</div>
+        <div class="box box7">step-end(过渡的时间结束直接终点)</div>
+        <div class="box box8">steps(20, start(先出发)end(晚出发))(分步过渡)</div>
+        <div class="box box9">cubic-bezier()(贝赛尔曲线)</div>
+        <!-- https://cubic-bezier.com--贝塞尔曲线网站 -->
+    </div>
+</body>
+
+</html>

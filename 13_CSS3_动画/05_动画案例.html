@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>动画案例</title>
+    <style>
+        .animation {
+            width: 130px;
+            height: 130px;
+            background-image: url(./images/bike.png);
+            transform: rotatey(180deg);
+            transition: all 5s linear;
+
+            animation: bike 1s 1s infinite steps(31);
+        }
+
+        body:hover .animation {
+            transform: translate(900px) rotatey(180deg);
+        }
+
+        @keyframes bike {
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 0 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="animation"></div>
+</body>
+
+</html>

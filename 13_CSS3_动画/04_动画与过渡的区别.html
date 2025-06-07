@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>动画与过渡的区别</title>
+    <!-- 
+    1. 过渡必须有触发条件，而动画不需要
+    2. 动画可以通过关键帧进行精细控制，过渡只关注始末
+    
+    -->
+    <style>
+        .outer {
+            width: 1000px;
+            height: 200px;
+            border: 1px solid black;
+        }
+
+        .inner {
+            width: 100px;
+            height: 100px;
+        }
+
+        /* 使用过渡，实现inner1跑到右边去 */
+        .inner1 {
+            background-color: orange;
+            transition: all 1s linear;
+        }
+
+        .outer:hover .inner1 {
+            transform: translate(900px);
+        }
+
+        /* 使用动画，实现inner1跑到右边去 */
+        .inner2 {
+            background-color: green;
+
+            animation: go-right 1s 1s forwards alternate linear;
+        }
+
+        @keyframes go-right {
+            0% {}
+
+            100% {
+                transform: translate(900px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner inner1">过渡</div>
+        <div class="inner inner2">动画</div>
+    </div>
+</body>
+
+</html>
