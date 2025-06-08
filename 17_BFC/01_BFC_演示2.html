@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>BFC_演示2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* display: flex; */
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        .box1 {
+            background-color: orange;
+            float: left;
+        }
+
+        .box2 {
+            background-color: green;
+
+             /* 浮动元素 */
+            /* float: left; */
+
+            /* 绝对/固定定位 */
+            /* position: absolute; */
+
+            /* 行内块元素 */
+            /* display: inline-block; */
+
+            /* 表格单元格元素 */
+            /* display: table; */
+
+            /* overflow值不为visible */
+            /* overflow: scroll; */
+
+            /* 伸缩项目 */
+            /* 父级开启flex */
+
+            /* 多列容器 */
+            /* column-count: 1; */
+
+            /* display的值为flow-root */
+            /* display: flow-root; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+</body>
+
+</html>
