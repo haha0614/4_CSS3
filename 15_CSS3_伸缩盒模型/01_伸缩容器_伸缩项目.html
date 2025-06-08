@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>伸缩容器_伸缩项目</title>
+        <style>
+            /*body {
+                display: flex;
+            }*/
+            .outer {
+                width: 1000px;
+                height: 600px;
+                background-color: #888;
+                /* 将该元素变为了伸缩容器(开启了flex布局) */
+                display: flex;
+
+                /*开启了伸缩容器并将容器改为行内块元素*/
+                /*display: inline-flex;*/
+
+                /*仅伸缩容器的子元素成为了伸缩项目, 孙子元素及后代都不是伸缩项目*/
+
+                /*元素一旦成为了伸缩项目,全部都会"块状化"*/
+            }
+
+            .inner {
+                width: 200px;
+                height: 200px;
+                background-color: skyblue;
+                border: 1px solid #000;
+                box-sizing: border-box;
+            }
+
+            .inner3 {
+                display: flex;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="outer">
+            <div class="inner">1</div>
+            <div class="inner">2</div>
+            <div class="inner inner3">
+                <div>a</div>
+                <div>b</div>
+                <div>c</div>
+            </div>
+        </div>
+
+        <!-- <div class="outer">
+            <div class="inner">1</div>
+            <div class="inner">2</div>
+            <div class="inner inner3">
+                <div>a</div>
+                <div>b</div>
+                <div>c</div>
+            </div>
+        </div> -->
+    </body>
+</html>

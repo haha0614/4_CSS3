@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>伸缩项目_缩</title>
+  <style>
+    .outer {
+      width: 400px;
+      height: 900px;
+      background-color: #888;
+      margin: 0 auto;
+
+      /*resize: both;
+                overflow: hidden;*/
+
+      /*伸缩盒模型相关属性--start*/
+
+      /* 将该元素变为了伸缩容器(开启了flex布局) */
+      display: flex;
+
+      /*调整主轴方向*/
+      /*row(默认值)--水平从左到右*/
+      flex-direction: row;
+
+      /*主轴换行方式*/
+      /*wrap--换行*/
+      /*flex-wrap: wrap;*/
+
+      /*主轴对齐方式*/
+      /*flex-start(默认值)--主轴的起始位置*/
+      justify-content: flex-start;
+
+      /*侧轴的对齐方式-单行*/
+      /*flex-start--侧轴起始位置对齐*/
+      /*align-items: flex-start;*/
+
+      /*侧轴的对齐方式-多行*/
+      /*flex-start--侧轴起始位置对齐*/
+      align-content: flex-start;
+    }
+
+    .inner {
+      width: 200px;
+      height: 200px;
+      background-color: skyblue;
+      border: 1px solid #000;
+      box-sizing: border-box;
+
+      /*默认值0,指即使有空余空间,也不瓜分*/
+      /*若都为相同值,则平分*/
+      /*若不同,例: 1,2,3; 则分别瓜分1/6, 2/6, 3/6*/
+      flex-grow: 1;
+
+      /*默认值1,*/
+      /* flex-shrink: 1; */
+      /*
+        首先拿到所有的伸缩项目, 拿到他们在主轴上的长度
+          盒子1: 200
+          盒子2: 300
+          盒子3: 200
+        计算分母: 200*1 + 300*1 + 200*1 = 700
+
+        计算收缩比:
+          盒子1: (200*1)/700 = 比例值1
+          盒子1: (300*1)/700 = 比例值2
+          盒子1: (200*1)/700 = 比例值3
+
+        盒子1收缩: 比例值1 * 300(伸缩容器减小的值)
+        盒子2收缩: 比例值2 * 300(伸缩容器减小的值)
+        盒子3收缩: 比例值3 * 300(伸缩容器减小的值)
+
+        注意: 如果盒子有边框, 最终结果会有一定的误差
+
+        收缩具有极限值, 至少要显示出所有内容
+      */
+    }
+
+    .inner1 {
+      flex-shrink: 1;
+    }
+
+    .inner2 {
+      flex-shrink: 2;
+      width: 300px;
+    }
+
+    .inner3 {
+      flex-shrink: 3;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="outer">
+    <div class="inner inner1">1</div>
+    <div class="inner inner2">2</div>
+    <div class="inner inner3">3</div>
+  </div>
+</body>
+
+</html>

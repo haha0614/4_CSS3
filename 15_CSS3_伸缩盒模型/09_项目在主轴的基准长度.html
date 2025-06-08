@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>项目在主轴的基准长度</title>
+        <style>
+            .outer {
+                width: 1000px;
+                height: 900px;
+                background-color: #888;
+                margin: 0 auto;
+
+                /*伸缩盒模型相关属性--start*/
+
+                /* 将该元素变为了伸缩容器(开启了flex布局) */
+                display: flex;
+
+                /*调整主轴方向*/
+                /*row(默认值)--水平从左到右*/
+                flex-direction: row;
+
+                /*主轴换行方式*/
+                /*wrap--换行*/
+                flex-wrap: wrap;
+
+                /*主轴对齐方式*/
+                /*flex-start(默认值)--主轴的起始位置*/
+                justify-content: flex-start;
+
+                /*侧轴的对齐方式-单行*/
+                /*flex-start--侧轴起始位置对齐*/
+                /*align-items: flex-start;*/
+
+                /*侧轴的对齐方式-多行*/
+                /*flex-start--侧轴起始位置对齐*/
+                /*align-content: flex-start;*/
+
+
+            }
+
+            .inner {
+                width: 200px;
+                height: 200px;
+                background-color: skyblue;
+                border: 1px solid #000;
+                box-sizing: border-box;
+            }
+
+            .inner2 {
+                /*设置伸缩项目在主轴上的基准长度, 若主轴是横向的,则原本的宽度失效,反之高度失效*/
+                /*auto(默认值)--原本多宽/高就多宽/高*/
+                flex-basis: 300px;
+                /*浏览器会使用此属性计算主轴上是否还有多余空间*/
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="outer">
+            <div class="inner">1</div>
+            <div class="inner inner2">2</div>
+            <div class="inner">3</div>
+        </div>
+    </body>
+</html>
